@@ -6,7 +6,7 @@ angular.module('daraApp')
         $scope.myInterval = 3000;
 
 
-        var query = $location.$$path.substring(1);
+        var query = $location.$$path;
 
         var client = algolia.Client('UM9GX4AKRT', 'ea47ccace4e5c89432326883cac9ae68');
         var index = client.initIndex('packages');
