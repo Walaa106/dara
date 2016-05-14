@@ -1,0 +1,63 @@
+//- navbar
+
+//- header#banner.hero-unit
+//-   .container
+
+.regular-header.regular-header--new.clearfix.hide-sm
+    .col-xs-3.col-xs-push-2
+        .help
+            span مساعدة
+            i.fa.fa-life-ring
+    .col-xs-5.col-xs-push-2.text-right(style='margin-top:5px')
+        img(src='../../assets/images/logo.png', width=56)
+.container-fluid
+    .row.row-space-8
+        .media-photo.media-photo-block.discovery-hero
+            .media-cover.media-cover-dark.discovery-hero-image(style='background-image:url({{content.cover_image}});')
+            .row.row-table.row-full-height
+                .col-sm-12.col-middle.text-center.text-contrast.panel-body
+                    h1.row-space-1 {{content.title}}
+                    h3.bold.text-lead.row-space-2.row-space-top-1 إبتداء من {{ content.checkin_date }} الی {{content.expiration_date}}
+
+    .row(style='margin-bottom: 12px;')
+        .col-xs-3.col-xs-push-2.text-right
+            //- .price.promotion-price
+            //-         i.fa.fa-usd 100
+        .col-xs-5.col-xs-push-2
+            .col-xs-4.price.text-left
+                span ${{content.rate}}
+                | / السعر للفرد 
+            h4.bold.pull-right.col-xs-6(style='font-size: 18px;font-weight: bold;') {{content.title}}
+
+    .row
+        .col-xs-3.col-xs-push-2
+            .col-xs-12(style='margin-bottom: 10%;font-size:16px;')
+                h4(style='font-size: 18px;font-weight: bold;')
+                    //- span Why visit?
+                p.text-lead
+                    {{content.subtitle}}
+            .col-xs-12
+                img(ng-src='https://maps.googleapis.com/maps/api/staticmap?markers=color:red%7Clabel:C%7C40.718217,-73.998284&size=314x265',
+                    style='width: 100%;')
+        .col-xs-5.col-xs-push-2
+            carousel(interval='myInterval')
+              slide(ng-repeat='slide in content.images')
+                img(ng-src='{{slide}}')
+
+    .row(style='margin-top:50px')
+        .col-xs-3.col-xs-push-2
+            .h4.bold الخدمات الموصى بها من النزلاء
+            .policies
+                .col-xs-3.endorsement.no-border(ng-repeat='endorsement in content.endorsements track by $index')
+                    .content
+                        i.fa.fa-check-circle-o
+                        {{endorsement}}
+        .col-xs-5.col-xs-push-2
+            .h4.bold سياسات
+            .policies
+                .policy(ng-repeat='policy in content.policies track by $index')
+                    span # {{$index+1}}
+                    .content {{policy}}
+
+br
+br

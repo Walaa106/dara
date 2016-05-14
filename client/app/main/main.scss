@@ -1,0 +1,273 @@
+@font-face {
+    font-family: 'Light';
+    font-weight: bold;
+    src: url('../../assets/fonts/Light.eot');
+    /* IE9 Compat Modes */
+    src: local('Light'), url('../../assets/fonts/Light.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+    url('../../assets/fonts/Light.woff') format('woff'), /* Modern Browsers */
+    url('../../assets/fonts/Light.svg#svgLight') format('svg');
+}
+
+@font-face {
+    font-family: 'Black';
+    font-weight: bold;
+    src: url('../../assets/fonts/Black.eot');
+    /* IE9 Compat Modes */
+    src: local('Light'), url('../../assets/fonts/Black.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+    url('../../assets/fonts/Black.woff') format('woff'), /* Modern Browsers */
+    url('../../assets/fonts/Black.svg#svgLight') format('svg');
+}
+
+@font-face {
+    font-family: 'Bold';
+    font-weight: bold;
+    src: url('../../assets/fonts/Bold.eot');
+    /* IE9 Compat Modes */
+    src: local('Bold'), url('../../assets/fonts/Bold.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+    url('../../assets/fonts/Bold.woff') format('woff'), /* Modern Browsers */
+    url('../../assets/fonts/Bold.svg#svgLight') format('svg');
+}
+
+@font-face {
+    font-family: 'Light';
+    src: local("Light"), url("../../assets/fonts/Light.ttf") format('truetype');
+    font-weight: 700;
+}
+
+@font-face {
+    font-family: 'Black';
+    src: local("Light"), url("../../assets/fonts/Black.ttf") format('truetype');
+    font-weight: 700;
+}
+
+@font-face {
+    font-family: 'Bold';
+    src: local("Light"), url("../../assets/fonts/Bold.ttf") format('truetype');
+    font-weight: 700;
+}
+
+body {
+    font-family: 'Light', Circular, "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-size: 14px;
+    line-height: 1.43;
+    color: hsl(200, 3%, 35%);
+    background-color: hsl(0, 0%, 96%);
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+.container-fluid {
+    direction: rtl;
+}
+
+h1 {
+    font-family: Black, Circular, "Helvetica Neue", Helvetica, Arial, sans-serif;
+    margin: 0.67em 0
+}
+
+h1,
+h3 {
+    color: #fff;
+}
+
+h3 {
+    font-weight: normal;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+.h1,
+.h2,
+.h3,
+.h4,
+.h5,
+.h6 {
+    line-height: 1.1;
+    text-rendering: optimizelegibility;
+}
+
+h1:first-child,
+h2:first-child,
+h3:first-child,
+h4:first-child,
+h5:first-child,
+h6:first-child {
+    margin-top: 0;
+}
+
+.row-space-8 {
+    margin-bottom: 50px;
+}
+
+.media-photo {
+    -webkit-backface-visibility: hidden;
+    -moz-backface-visibility: hidden;
+    backface-visibility: hidden;
+    position: relative;
+    display: inline-block;
+    vertical-align: bottom;
+    overflow: hidden;
+    background-color: hsl(200, 3%, 80%);
+}
+
+.media-cover,
+.media-cover-dark:after {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+}
+
+.col-middle {
+    vertical-align: middle;
+}
+
+.discovery-hero-image {
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    background-position: 0% 50%;
+}
+
+.discovery-hero {
+    height: 250px;
+}
+
+.media-photo-block {
+    display: block;
+}
+
+.row.row-table {
+    width: 100%;
+    width: -webkit-calc(100% + 25px);
+    width: -moz-calc(100% + 25px);
+    width: calc(100% + 25px);
+}
+
+.row-full-height {
+    height: 100%;
+}
+
+.row-space-1 {
+    margin-bottom: 6.25px;
+}
+
+.row-space-top-1 {
+    margin-top: 6.25px;
+}
+
+.text-lead {
+    font-size: 16px;
+}
+
+.row-table {
+    margin: 7% auto;
+}
+
+.price {
+    span {
+        color: #3598DC;
+        font-size: 25px;
+    }
+    font-weight: 200;
+}
+
+.promotion-price i {
+    font-size: 18px;
+    text-decoration: line-through;
+}
+
+#slides_control > div {
+    height: 200px;
+}
+
+.carousel-inner {
+    img {
+        margin: auto;
+        height: 400px !important;
+        // width: 900px !important;
+    }
+}
+
+#slides_control {
+    position: absolute;
+    width: 400px;
+    left: 50%;
+    top: 20px;
+    margin-left: -200px;
+}
+
+.regular-header--new {
+    display: block;
+    height: 71px;
+}
+
+.help {
+    display: flex;
+    align-items: center;
+    height: 71px;
+    padding: 0 19px;
+    border-right: 1px solid #dce0e0;
+    border-left: 1px solid #dce0e0;
+    float: left;
+    cursor: pointer;
+    span {
+        margin-right: 10px;
+        font-size: 17px;
+    }
+    i {
+        font-size: 18px;
+    }
+    &:hover {
+        background-color: #E8E8E8;
+    }
+}
+
+.policies {
+    border-width: 1px;
+    border-color: hsl(0, 0%, 77%);
+    border-style: solid;
+    .policy {
+        padding: 15px 20px;
+        width: 100%;
+        border-width: 1px;
+        border-color: hsl(0, 0%, 77%);
+        border-bottom-style: solid;
+    }
+    i {
+        margin-left: 10px;
+        color: #3598DC;
+    }
+}
+
+.guidebook-place-card__number {
+    display: inline-block;
+    font-size: 24px;
+    font-family: CircularAirPro, Circular;
+    font-weight: lighter;
+    margin: 0;
+    padding-top: 5px;
+}
+
+.bold {
+    font-family: Bold;
+}
+
+
+.no-border {
+    border: 0 !important;
+}
+
+.endorsement {
+    padding: 15px 20px;
+    border-width: 1px;
+    border-color: hsl(0, 0%, 77%);
+    border-bottom-style: solid;
+    float: right;
+}
